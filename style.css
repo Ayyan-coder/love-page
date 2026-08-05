@@ -1,0 +1,156 @@
+/* style.css */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ff9ecf,#ffe2ef);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:420px;
+    background:#fff;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+    position:relative;
+    animation:pop .8s;
+}
+
+@keyframes pop{
+    from{
+        opacity:0;
+        transform:scale(.7);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.names{
+    color:#ff2d75;
+    font-size:28px;
+    margin-bottom:12px;
+    animation:glow 1.5s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 5px #ff6aa2;
+    }
+    to{
+        text-shadow:0 0 20px #ff2d75;
+    }
+}
+
+h1{
+    color:#ff2d75;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    color:#666;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.catGif{
+    width:220px;
+    border-radius:18px;
+    margin-bottom:25px;
+}
+
+.btnArea{
+    position:relative;
+    height:120px;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+    border-radius:50px;
+    padding:14px 30px;
+    font-size:20px;
+    transition:.3s;
+}
+
+#yesBtn{
+    background:#ff2d75;
+    color:white;
+    margin-right:18px;
+}
+
+#yesBtn:hover{
+    transform:scale(1.08);
+}
+
+#noBtn{
+    background:#555;
+    color:white;
+    position:absolute;
+}
+
+.hidden{
+    display:none;
+}
+
+#successPage{
+    position:fixed;
+    inset:0;
+    background:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    animation:fade .8s;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.kissGif{
+    width:250px;
+    border-radius:20px;
+    margin:20px 0;
+}
+
+.loveText{
+    margin-top:20px;
+    color:#ff2d75;
+    font-size:26px;
+    font-weight:bold;
+    animation:heartbeat 1s infinite;
+}
+
+@keyframes heartbeat{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.15);}
+    100%{transform:scale(1);}
+}
+
+.hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+}
